@@ -80,7 +80,7 @@
 
 - name: present | Create Caddy Docker container
   community.docker.docker_container:
-    name: caddy
+    name: "{{ caddy_docker_name }}"
     image: "{{ caddy_docker_image }}"
     command: "{{ caddy_docker_command }}"
     restart_policy: "{{ caddy_docker_restart_policy }}"
@@ -95,5 +95,5 @@
 
 - name: present | Start Caddy Docker container
   community.docker.docker_container:
-    name: caddy
+    name: "{{ caddy_docker_name }}"
     state: started

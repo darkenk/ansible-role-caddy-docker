@@ -2,5 +2,5 @@
 # handlers file for caddy_docker
 - name: Reload Caddy configuration
   ansible.builtin.command:
-    cmd: docker exec caddy caddy reload --config /etc/caddy/Caddyfile
+    cmd: 'docker exec {{ caddy_docker_name }} caddy reload --config /etc/caddy/Caddyfile'
   changed_when: false

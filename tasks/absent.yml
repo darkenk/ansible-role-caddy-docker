@@ -32,5 +32,5 @@
 
 - name: absent | Remove Caddy Docker container
   community.docker.docker_container:
-    name: caddy
+    name: "{{ caddy_docker_name }}"
     state: absent
